@@ -5,9 +5,9 @@ int main(void){
     int b = 0;
     int c[100];
     int count = 0;
-    printf ();
+    printf ("\n");
     scanf ("%d",&a);
-    printf();
+    printf("");
     while (a){
         c[b] = a%2;
         b++;
@@ -19,7 +19,7 @@ int main(void){
             count++;
         }
     }
-    printf("\n\"1\,count);
+    printf("\n\"1\"%d\n",count);
     system("pause");
     return 0;
 }
