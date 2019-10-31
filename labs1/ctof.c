@@ -1,6 +1,7 @@
 #include <stdio.h>
 main()
 {
+    printf("摄氏度-华氏度\n");
     int fahr, celsius;
     int lower, upper, step;
     lower = 0;
