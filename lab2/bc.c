@@ -12,8 +12,7 @@ main()
        b++;
       }
     while (c[b] !='\n');
-
-   putchar(c[b]);
+    
     if(b == 1)
     {x = c[0];}
 
