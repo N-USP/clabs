@@ -7,7 +7,6 @@ main()
     int x;
 
    do{ c[b] = getchar();
-       putchar(c[b]);
        c[b] = c[b] - '0';
        b++;
       }
