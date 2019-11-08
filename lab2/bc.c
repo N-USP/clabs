@@ -36,10 +36,10 @@ main()
  while(x !=0){
    i = x & 1;
    x = x<<1;
-   if(i =0){
+   if(i   !=0){
      count++;
    }
  }
-printf("%d\0",count);
+printf("%d\n",count);
 return 0;
 }
