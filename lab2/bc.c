@@ -29,15 +29,8 @@ main()
 
     else{printf("数字过大\n");}
 
- int count = 0;
- int i = 0;
- while(x !=0){
-   i = x & 1;
-   x = x<<1;
-   if(i !=0){
-     count++;
-   }
- }
-printf("%d\n",count);
-return 0;
+    int a;
+    a = x & 131071;
+    printf("%d\n",a);
+
 }
