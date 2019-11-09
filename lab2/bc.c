@@ -6,11 +6,13 @@ main()
     int b = 0;
     int x;
 
-   do{ c[b] = getchar();
+    c[b] = getchar();
+    while (c[b] !='\n'){
+        
        c[b] = c[b] - '0';
        b++;
-      }
-    while (c[b] !='\n');
+      c[b] = getchar();
+    }
     
     if(b == 1)
     {x = c[0];}
@@ -27,10 +29,14 @@ main()
     else if(b == 5)
     {x = c[0]*10000 + c[1]*1000 + c[2]*100 + c[3]*10 + c[4];}
 
-    else{printf("数字过大\n");}
+    else{exit(0);}
 
-    int a;
-    a = x & 131071;
-    printf("%d\n",a);
+      int n = x;
+      int count = 0;
+    while(n != 0) {
+        n = n & (n-1);
+        count++;
+    }
+    printf("%d\n",count);
 
 }
