@@ -1,10 +1,11 @@
 #include<stdio.h>
+#include<string.h>
 int count(char *str){
     int i = 0;
     while(str[i++] !='\0'){
         ;
     }
-    i--;
+    i--;i--;
     return i;
 }
 int strrindex(char line[],char pattern[]){
@@ -12,18 +13,18 @@ int strrindex(char line[],char pattern[]){
     int b = count(pattern);
     
     int i = a;
-    while(i !=1){
-      int k = 0;int j = i - b + 1;
-      while(j !=1 && line[j] ==  pattern[k]){
-      k++;j--;
-      }
-      i--;
+    while(i >=0){
+      int k = 0;int j = i - b;
+      while(j >=0 && line[j] == pattern[k]){
       if(k == b){
           return i;
          }
+      k++;j++;
+      }
+      i--;
     }
-    return -1;
- }
+      return -1;
+}
 main()
 {
     char line[1000];
