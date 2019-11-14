@@ -21,8 +21,8 @@ int strrindex(char line[],char pattern[]){
       if(k == b){
           return i;
          }
-      return -1;
     }
+    return -1;
  }
 main()
 {
