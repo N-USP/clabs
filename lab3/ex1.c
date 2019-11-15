@@ -17,6 +17,7 @@ int strrindex(char line[],char pattern[]){
       int k = 0;int j = i - b;
       while(j >=0 && line[j] == pattern[k]){
       if(k == b){
+          i = i - b;
           return i;
          }
       k++;j++;
