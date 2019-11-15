@@ -8,7 +8,7 @@ int count(char *str){
     i--;i--;
     return i;
 }
-int strrindex(char line[],char pattern[]){
+int strrindex(pattern  line[],char line[]){
     int a = count(line);
     int b = count(pattern);
     
@@ -30,6 +30,6 @@ main()
 {
     char line[1000];
     char pattern[1000];
-    scanf("%s %s",line,pattern);
-    printf("%d\n",strrindex(line,pattern));
+    scanf("%s %s",pattern,line);
+    printf("%d\n",strrindex(pattern,line));
 }
