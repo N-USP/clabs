@@ -8,7 +8,7 @@ int count(char *str){
     i--;i--;
     return i;
 }
-int strrindex(pattern  line[],char line[]){
+int strrindex(char pattern[],char line[]){
     int a = count(line);
     int b = count(pattern);
     
