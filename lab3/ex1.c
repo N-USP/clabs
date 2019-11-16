@@ -26,7 +26,7 @@ int strrindex(char pattern[],char line[]){
     }
       return -1;
 }
-main()
+int main()
 {
     char line[1000];
     char pattern[1000];
