@@ -16,12 +16,12 @@ int strrindex(char pattern[],char line[]){
     while(i >=0){
       int k = 0;int j = i - b;
       while(j >=0 && line[j] == pattern[k]){
-      if(k == b){
-          i = i - b;
-          return i;
-         }
-      k++;j++;
-      }
+        if(k == b){
+             i = i - b;
+             return i;
+            }
+         k++;j++;
+        }
       i--;
     }
       return -1;
