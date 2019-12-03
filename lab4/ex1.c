@@ -22,6 +22,12 @@ int main()
         case'+':
             push(pop() + pop());
             break;
+        case '%': 
+            op2 = pop();
+            if (op2 != 0) 
+               push ((int)pop() % (int)op2); 
+            else printf("error : zero divisor\n"); 
+            break;
         case'*':
             push(pop() * pop());
             break;
