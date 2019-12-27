@@ -13,7 +13,7 @@ int main()
         exit(0);
     }
     c = getchar();
-    if(c !='x' ||c !='X'){
+    if(c !='x' &&c !='X'){
         printf("输入了不合法的字符\n");
         exit(0);
     }
