@@ -10,7 +10,7 @@ int main()
         q = q << 4;
         p =  p + 1;
     }
-    p = p + 2;
+    p = p + 1;
     unsigned int o = 0 - 1;
     int i = 0;
     printf("输入一个16进制的非负整数,以“0x”开头.\n");
@@ -50,7 +50,7 @@ int main()
             exit(0);
         }
     }
-    if(x >= c){
+    if(i >= p){
         printf("输入的数字太大，需要换一个小的数字,最大不超过%u\n",o);
         exit(0);
     }else{
