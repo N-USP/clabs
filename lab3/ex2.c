@@ -1,5 +1,6 @@
 #include<stdio.h>
 #include<stdlib.h>
+
 int main()
 {
     printf("输入一个16进制的非负整数,以“0x”开头.\n");
@@ -7,7 +8,15 @@ int main()
     int i = 0;
     int x = 0;
     c = getchar();
+    if(c !='0'){
+        printf("输入了不合法的字符\n");
+        exit(0);
+    }
     c = getchar();
+    if(c !='x' ||c !='X'){
+        printf("输入了不合法的字符\n");
+        exit(0);
+    }
     c = getchar();
     while (c !='\n'&&c !=EOF){
         if((c>='0'&&c<='9')||(c>='a'&&c <= 'f')||(c>='A'&&c <= 'F')){
@@ -38,4 +47,4 @@ int main()
     }else{
         printf("%d\n",x);
     }
-}
+} 
