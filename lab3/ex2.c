@@ -3,9 +3,9 @@
 
 int main()
 {
+	unsigned int o = 0 -1;
     printf("输入一个16进制的非负整数,以“0x”开头.\n");
     char c;
-    int i = 0;
     int x = 0;
     c = getchar();
     if(c !='0'){
@@ -34,15 +34,14 @@ int main()
                 x = x * 16 + 15;
             }else{x = x * 16 + (c - '0');
             }
-            ++i;
             c = getchar();
         }else{
             printf("输入了不合法的字符\n");
             exit(0);
         }
     }
-    if(i > 10){
-        printf("输入的数字太大，需要换一个小的数字,最大不超过0xffffffff\n");
+    if(x >= o){
+        printf("输入的数字太大，需要换一个小的数字,最大不超过%u\n",o);
         exit(0);
     }else{
         printf("%d\n",x);
