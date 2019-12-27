@@ -1,31 +1,26 @@
 #include<stdio.h>
-int count(char str[]){
-    int i = 0;
-    while(str[i] != '\0'){
-      i++;
-    }
-    return i;
-}
-
-void reverse(char input[], char result[]) {
-    int length = count(input) - 1;
-    int index = 0;
-    while(length >= 0){
-      result[index++] = input[length--];
+void reverse(char s[],int i, int j){
+    int a;
+    int b;
+    b = j-(i + 1);
+    if(i < b){
+        a = s[i];
+        s[i] = s[b];
+        s[b] = a;
+        reverse(s,++i,j);
     }
 }
-
-int main()
-{
-    char input[1024];
+int main(){
+    printf("please int something:");
+    char s;
+    char t[1000];
     int i = 0;
-    input[i] = getchar();
-    while (input[i] !='\n'){
-        i++;
-        input[i] = getchar();
+    int k = 0;
+    while((s = getchar()) !='\n'){
+        t[i] = s;
+        k = ++i;
     }
-
-    char result[1024];
-    reverse(input, result);
-    printf("%s\n", result);
+    reverse(t,0,k);
+    for(i = 0;i < k;i++)
+    printf("%c\n",t[i]);
 }
